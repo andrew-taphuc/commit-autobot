@@ -22,7 +22,7 @@ jobs:
 
       - name: Modify last update
         run: |
-          d=`This is the first commit of date '+%Y-%m-%d'`
+          d=`This is the first commit of date '+%Y-%m-%dT%H:%M:%SZ'`
           echo $d > LAST_UPDATED
           
       - name: Commit changes
