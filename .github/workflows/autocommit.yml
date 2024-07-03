@@ -7,7 +7,7 @@ on:
       - master
       
   schedule:
-  - cron: "0,10,20,30,40,50 * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+  - cron: "15 13 * * *" # See https://crontab.guru/
 
 jobs:
   auto_commit:
@@ -31,16 +31,16 @@ jobs:
           git config --local user.name "andrew-taphuc"
           git add -A
           
-          arr[0]="chore(bot): 😂 auto commit"
-          arr[1]="chore(bot): 😱 auto commit"
-          arr[2]="chore(bot): 👿 auto commit"
-          arr[3]="chore(bot): 💩 auto commit"
-          arr[4]="chore(bot): 🙏 auto commit"
-          arr[5]="chore(bot): 🙈 auto commit"
-          arr[6]="chore(bot): 🐐 auto commit"
-          arr[7]="chore(bot): 🤖 auto commit"
-          arr[8]="chore(bot): 🟩 auto commit"
-          arr[9]="chore(bot): 👻 auto commit"
+          arr[0]="andrew-taphuc: make it green"
+          arr[1]="andrew-taphuc: make it green"
+          arr[2]="andrew-taphuc: make it green"
+          arr[3]="andrew-taphuc: make it green"
+          arr[4]="andrew-taphuc: make it green"
+          arr[5]="andrew-taphuc: make it green"
+          arr[6]="andrew-taphuc: make it green"
+          arr[7]="andrew-taphuc: make it green"
+          arr[8]="andrew-taphuc: make it green"
+          arr[9]="andrew-taphuc: make it green"
           
           rand=$[$RANDOM % ${#arr[@]}]
           
