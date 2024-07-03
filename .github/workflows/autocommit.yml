@@ -7,7 +7,7 @@ on:
       - master
       
   schedule:
-  - cron: "35 13 * * *" # See https://crontab.guru/
+  - cron: "40 15 * * *" # See https://crontab.guru/
 
 jobs:
   auto_commit:
@@ -22,8 +22,9 @@ jobs:
 
       - name: Modify last update
         run: |
-          TZ='Asia/Ho_Chi_Minh' d=`date '+%Y-%m-%dT%H:%M:%S+07:00'`
+          TZ='Asia/Ho_Chi_Minh' d=`date -u -d '+7 hours' '+%Y-%m-%dT%H:%M:%S+07:00'`
           echo -e "This is the first commit of $d" > LAST_UPDATED
+          #d=`date -u -d '+7 hours' '+%Y-%m-%dT%H:%M:%S+07:00'` && echo "This is the first commit of $d" > LAST_UPDATED
           # echo $d > LAST_UPDATED
           
       - name: Commit changes
