@@ -23,7 +23,6 @@ jobs:
       - name: Modify last update
         run: |
           TZ='Asia/Ho_Chi_Minh'
-          d=`date '+%Y-%m-%dT%H:%M:%SZ'`
           echo -e "This is the first commit of $d" > LAST_UPDATED
           # echo $d > LAST_UPDATED
           
